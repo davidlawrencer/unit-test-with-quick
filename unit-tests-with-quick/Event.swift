@@ -27,7 +27,7 @@ struct EventWrapper: Codable {
 
 struct Event: Codable {
     //MARK: - Codable Properties
-    private let url: String
+    let url: String
     private let images: [EventImage]
     private let dates: EventDateWrapper
     private let priceRanges: [EventPrice]?
@@ -82,7 +82,6 @@ struct Event: Codable {
         let maxFormatted = String(format: "%.2f", maxPrice)
         return "$\(minFormatted) - $\(maxFormatted)"
     }
-
 }
 
 //Use 4th index
